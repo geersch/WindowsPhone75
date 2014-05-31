@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_IStackExchangeService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:8732/StackExchangeService"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IStackExchangeService"
+                contract="ServiceReference.IStackExchangeService" name="BasicHttpBinding_IStackExchangeService" />
+        </client>
+    </system.serviceModel>
+</configuration>
